@@ -1,0 +1,77 @@
+.container{
+    height: 600px;
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+    margin-left:10%;
+    margin-right: auto;
+    margin-top: 5%;
+    background-color: white;
+    box-shadow: 0 0 2rem white;
+  
+}
+body{
+    background-color: rgb(20, 240, 35);
+    text-align: center;
+    color: white;
+    font-size: large;
+    margin-top: 20px;
+}
+body p{
+    font-size: 20px;
+}
+.box{
+    height:  500px;
+    width: 600px;
+    box-shadow: 0 0 5rem rgb(206, 243, 206);
+    margin: 30px;
+    
+
+}
+.box1{
+    background-image: url("ewaste1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    
+}
+.login{
+    height: 100px;
+    width: 500px;
+  
+   margin-top: 20px;
+   margin-left: 50px;
+   margin-bottom: 50px;
+   box-shadow: 0 0  5rem rgb(180, 244, 132);
+}
+a{
+    height: 30px;
+    width: 30px;
+    border:2px solid black;
+    font-size: medium;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(179, 249, 179);
+    text-decoration: none;
+}
+a:hover{
+    background: transparent;
+}
+.main{
+    text-align: center;
+    color:rgb(7, 7, 7);
+ 
+    
+
+}
+.user{
+    text-align: center;
+    color:rgb(12, 11, 11);
+}
+.collector{
+    text-align: center;
+    color: black;
+}

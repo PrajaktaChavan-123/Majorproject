@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Account Selection</title>
+  <link rel="stylesheet" href="styles1.css">
+  <style>
+   
+    .signup-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-option {
+      width: 150px;
+      height: 100px;
+      margin: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .user-option {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    .collector-option {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+    body{
+      background-color:#67f76c;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="loginpage.html">Goto login page and click on user signup or collector sigunup</a>
+<!--
+  <div class="signup-container">
+    <div class="signup-option user-option" onclick="selectUser()">
+      User
+    </div>
+    <div class="signup-option collector-option" onclick="selectCollector()">
+      Collector
+    </div>
+  </div>
+-->
+  <script>
+    function selectUser() {
+      window.location.href = 'user_signup.html';
+    }
+
+    function selectCollector() {
+      window.location.href = 'collector_signup.html';
+    }
+  </script>
+</body>
+</html>

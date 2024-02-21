@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Waste Collection</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin-top: 20px;
+    }
+
+    /* Style for the form */
+    #location-form {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #location-form label,
+    #location-form select,
+    #location-form button {
+      margin: 5px;
+    }
+
+    #location-form select {
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    #location-form button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #location-form button:hover {
+      background-color: #45a049;
+    }
+
+    /* Map container style */
+    #map-container {
+      width: 80%;
+      margin-top: 20px;
+    }
+
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+   
+  </style>
+  <!-- Include Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"
+  />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul id="navList">
+            <li>
+                <p id="navLogo">E-Waste Facility Locator</p>
+            </li>
+            <li>
+                <div id="navItems">
+                    <a href="Home.html">Home</a>
+                    <a href="login.html">Login</a>
+                    <a href="education.html">Education</a>
+                    <a href="Contact us.html">Contact Us</a>
+                    <a href="about.html">About</a>
+                    <a href="ewaste.html">Nearest Collector</a>
+                    
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+  <h1 >E-Waste Collection</h1>
+  
+  <form id="location-form">
+    <label for="state">Select State:</label>
+    <select id="state" name="state" required>
+      <option value="">Select State</option>
+    </select>
+    
+    <label for="city">Select City:</label>
+    <select id="city" name="city" required>
+      <option value="">Select City</option>
+    </select>
+    
+    <button type="submit">Search</button>
+  </form>
+  
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+  
+  <!-- Include Leaflet JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Function to populate State and City dropdowns
+    function populateDropdowns() {
+      const stateDropdown = document.getElementById('state');
+      const cityDropdown = document.getElementById('city');
+
+      // Populate State dropdown if it's empty
+      if (stateDropdown.children.length === 1) {
+        const defaultStateOption = document.createElement('option');
+        defaultStateOption.text = 'Maharashtra';
+        defaultStateOption.value = 'maharashtra';
+        stateDropdown.add(defaultStateOption);
+      }
+
+      // Populate City dropdown for Maharashtra if it's empty
+      if (cityDropdown.children.length === 1) {
+        const defaultCityOption = document.createElement('option');
+        defaultCityOption.text = 'Solapur';
+        defaultCityOption.value = 'solapur';
+        cityDropdown.add(defaultCityOption);
+      }
+    }
+
+    // Event listener to populate dropdowns on click or focus
+    document.addEventListener('DOMContentLoaded', function() {
+      const stateDropdown = document.getElementById('state');
+
+      stateDropdown.addEventListener('click', function() {
+        populateDropdowns();
+      });
+
+      stateDropdown.addEventListener('focus', function() {
+        populateDropdowns();
+      });
+
+      // Leaflet map initialization centered on Solapur, Maharashtra
+      const map = L.map('map').setView([17.6599, 75.9064], 12); // Coordinates for Solapur, Maharashtra
+      const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+      const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      const tiles = L.tileLayer(tileUrl, { attribution });
+      tiles.addTo(map);
+    });
+  </script>
+  <footer>
+       
+    <div class="footer">
+        <a href="apurvaaherkar0152@gmail.com"><img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSqjezpwa771boR4AcoyYpmU43HVyPVxrdb1dE6-ST8wS6Rtb21Bb8KXCa8poDhlKCY9E&usqp=CAU" alt="Email" height="30" width="40"></a>
+        <a href="https://github.com/NamrataB1306"><img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfk29ljV0CGtyFRpgpE8oXE8srMwEg0MJR_w&usqp=CAU" alt="github" height="30" width="40"></a>
+        <a href="https://www.linkedin.com/in/prajakta-chavan-47aba5241/"><img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS6_UCWMkR_qrlIP2aZDP9F5tC708WY8VUWw&usqp=CAU" alt="LinkedIn" height="30" width="40"></a>
+        <a href="https://www.instagram.com/_prerna_10_/"><img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Uo64BrM-GtS0FpQvvmXSOl24-TGhA_jY0Q&usqp=CAU" alt="Email" height="30" width="40"></a>
+    </div>
+    <p>
+        Copyright &copy; E-Waste Facility Locator Major Project 2023. All Rights Reserved.
+    </p>
+</div>
+</footer>
+</body>
+</html>

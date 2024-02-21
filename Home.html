@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js"></script>
+<title>E-Waste Facilty loacator</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul id="navList">
+                <li>
+                    <p id="navLogo">E-Waste Facility Locator</p>
+                </li>
+                <li>
+                    <div id="navItems">
+                        <a href="#">Home</a>
+                        <a href="loginpage.html">Login</a>
+                        <a href="education.html">Education</a>
+                        <a href="Contact us.html">Contact Us</a>
+                        <a href="about.html">About</a>
+                        <a href="ewaste.html">Nearest Collector</a>
+                        
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- learn more popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Harmful Components of E-Waste</h2>
+                <p>
+                    Electronic waste, or e-waste, contains various harmful components that can have detrimental effects on the environment and human health if not disposed of properly. Here are some of the key components and their effects:
+                </p>
+                <ul>
+                    <li><strong>Lead:</strong> Found in CRT monitors and some circuit boards, lead exposure can result in neurological and developmental issues, especially in children.</li>
+                    <li><strong>Mercury:</strong> Commonly found in fluorescent lamps and batteries, mercury can harm the nervous system, kidneys, and the environment when it enters water bodies.</li>
+                    <li><strong>Cadmium:</strong> Found in rechargeable batteries, cadmium is a carcinogen and can cause lung and prostate cancer.</li>
+                    <li><strong>Hexavalent Chromium:</strong> Present in some electronics, it's a carcinogen and can also harm the respiratory system and skin.</li>
+                    <li><strong>Polybrominated Flame Retardants:</strong> Used in plastics and circuit boards, these can disrupt hormones and potentially lead to developmental issues.</li>
+                </ul>
+                <p>
+                    Proper e-waste disposal and recycling are essential to prevent these toxic components from leaching into the environment and posing health risks. Recycling e-waste helps recover valuable materials and reduces the burden on landfills.
+                </p>
+            </div>
+        </div>
+        
+    <section id="What is E-Waste?">
+        <h1>#What is E-Waste?#</h1>
+
+        <div class="Define">
+            <P1>
+                    E-waste is any electrical or electronic equipment that’s been discarded.
+                    This includes working and broken items that are thrown in the garbage or
+                    donated to a charity reseller like Goodwill.
+                    Often, if the item goes unsold in the store, it will be thrown away.
+                    E-waste is particularly dangerous due to toxic chemicals that naturally
+                    leach from the metals inside when buried.
+            </P1>
+            
+
+        </div>
+
+        <!-- User Input Give Credits -->
+        <section id="user-credits">
+            <h1> ***Your Device Details***</h1>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <p>Input the model of your old device to earn "CREDITS" based on precious petals.</p>
+                <input type="text" id="device-model" placeholder="Enter your device model">
+                <button type="submit" id="earn-credits-button">Earn Credits</button>
+            </form> 
+            <h2>Your Credits: <span id="credits">0</span></h2>
+            <button onclick="openPopup()">Learn More</button>
+        </section>
+        
+        <!-- User Input Location & Map embed -->
+        <section id="nearest-facilities">
+            <div class="ewasteimg">
+                <div class="ewaste ewaste1">
+                   
+                </div>
+                <div class="ewaste ewaste2">
+                </div>
+                <div class="ewaste ewaste3">
+                </div>
+                <div class="ewaste ewaste4">
+                </div>
+                <div class="ewaste ewaste5">
+                </div>
+                <div class="ewaste ewaste6">
+                </div>
+                <div class="ewaste ewaste7">
+                </div>
+                <div class="ewaste ewaste8">
+                </div>
+                <div class="ewaste ewaste9">
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+       
+            <div class="footer">
+                <a href="apurvaaherkar0152@gmail.com"><img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSqjezpwa771boR4AcoyYpmU43HVyPVxrdb1dE6-ST8wS6Rtb21Bb8KXCa8poDhlKCY9E&usqp=CAU" alt="Email" height="30" width="40"></a>
+                <a href="https://github.com/NamrataB1306"><img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfk29ljV0CGtyFRpgpE8oXE8srMwEg0MJR_w&usqp=CAU" alt="github" height="30" width="40"></a>
+                <a href="https://www.linkedin.com/in/prajakta-chavan-47aba5241/"><img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS6_UCWMkR_qrlIP2aZDP9F5tC708WY8VUWw&usqp=CAU" alt="LinkedIn" height="30" width="40"></a>
+                <a href="https://www.instagram.com/_prerna_10_/"><img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Uo64BrM-GtS0FpQvvmXSOl24-TGhA_jY0Q&usqp=CAU" alt="Email" height="30" width="40"></a>
+            </div>
+            <p>
+                Copyright &copy; E-Waste Facility Locator Major Project 2023. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <!--  Credits Logic  -->
+    <script>
+        // Predefined device models and associated credits
+        const deviceCredits = {
+            "laptop": 50,
+            "smartphone": 30,
+            "tablet": 20,
+            "desktop": 40,
+            "printer": 25,
+            "gaming console": 35,
+            "camera": 15,
+            "monitor": 30,
+            "router": 20,
+            "external hard drive": 25,
+            // Add more device models and credits as needed
+        };
+    
+        document.getElementById("earn-credits-button").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent form submission
+    
+            const deviceModel = document.getElementById("device-model").value.toLowerCase(); // Convert to lowercase for case-insensitivity
+            const creditsEarned = deviceCredits[deviceModel];
+    
+            const creditsEarnedDisplay = document.getElementById("credits");
+    
+            if (creditsEarned !== undefined) {
+                creditsEarnedDisplay.textContent = `You've earned ${creditsEarned} credits for recycling your ${deviceModel}!`;
+            } else {
+                creditsEarnedDisplay.textContent = "Invalid device model or no credits earned.";
+            }
+        });
+    </script>    
+
+</body>
+
+</html>
