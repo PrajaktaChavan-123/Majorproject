@@ -1,107 +1,17 @@
-<!DOCTYPE html>
-<!--<html>
-<head>
-    <link rel="stylesheet" href="style.css">
-    <div class="container">
-        <div class="content">
-          <section class="border-section">
-            <div class="image_container">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3LslHj_hgGfWPzQ5l5Lkk8HRzmhsh2EuuVw&usqp=CAU" alt="Your Image" style="display: block; margin: 0 auto;">
-            </div>
-            <div>
-              
-<style>
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    text-decoration: underline;
-    
-}
 
-.contact-form {
-    width: 300px;
-    margin: 0 auto;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    text-align: center;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.contact-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-.contact-form input[type="submit"]:hover {
-    opacity: 0.8;
-}
-
-.contact-form .form-error {
-    color: red;
-    display: none;
-}
-</style>
-</head>
-<body>
-
-<h2>Contact Us</h2>
-
-<form class="contact-form" onsubmit="return validateForm()">
-    <label for="fname">Name</label>
-    <input type="text" id="fname" name="name" placeholder="Your Name..">
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Your Email..">
-
-    <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Write something.." style="height:100px"></textarea>
-
-    <input type="submit" value="Submit">
-    <div class="form-error">Please fill in all fields correctly.</div>
-</form>
-
-<script>
-function validateForm() {
-    let x = document.forms["contact-form"]["name"].value;
-    let y = document.forms["contact-form"]["email"].value;
-    let z = document.forms["contact-form"]["message"].value;
-    if (x == "" || y == "" || z == "") {
-        document.getElementsByClassName("form-error")[0].style.display = "block";
-        return false;
-    }
-    else {
-        document.getElementsByClassName("form-error")[0].style.display = "none";
-        return true;
-    }
-}
-</script>
-
-
-</body>
-</html>-->
+      
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Waste Facility Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+          
         }
 
         form {
@@ -129,13 +39,22 @@ function validateForm() {
             border-radius: 4px;
             cursor: pointer;
         }
+      
     </style>
 </head>
-<body>
+<body  >
+    <div class="book-appinment">
+    <div class="book">
+        <img src="book.png">
+    </div>
+    <div class="contain">
 
     <h2>E-Waste Facility Appointment Booking</h2>
 
-    <form action="/submit-appointment" method="post">
+    <form
+    action="https://formspree.io/f/xgegyebg"
+    method="POST" 
+  >
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -148,6 +67,8 @@ function validateForm() {
             <option value="facility2">Facility 2</option>
             <!-- Add more facilities as needed -->
         </select>
+        <label for="device">Enter your device name:</label>
+        <input type="text" name="devices" id="device" required>
 
         <label for="date">Preferred Date:</label>
         <input type="date" id="date" name="date" required>
@@ -158,8 +79,10 @@ function validateForm() {
         <label for="comments">Additional Comments:</label>
         <textarea id="comments" name="comments" rows="4"></textarea>
 
-        <button type="submit">Book Appointment</button>
+        <button type="submit" class="btn">Book Appointment</button>
     </form>
-
+</div>
+   
+    </div>
 </body>
 </html>
