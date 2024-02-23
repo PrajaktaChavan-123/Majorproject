@@ -39,4 +39,31 @@ img {
     background-color: rgb(153, 153, 239);
     color:black
   }
+.book-appinment{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(154, 199, 239);
+
+}
+.book{
+  height: 400px;
+  margin-right: 50px;
+}
+.contain{
+  height: 700px;
+  width: 100%;
+  border-radius: 5px;
+
+  padding:20px;
+  background-color:rgb(128, 119, 223);
+  box-shadow: 0 0 6rem rgb(211, 216, 225);
+}
+.contain input,select,textarea{
+  border-radius: 5px;
+}
+.btn:hover{
+  background:transparent;
+  color:black;
+} 
   
