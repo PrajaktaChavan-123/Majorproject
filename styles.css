@@ -175,6 +175,15 @@ header ul {
     text-decoration: none;
     margin-right: 15px;
 }
+.btn3{
+    background-color: red;
+    border-radius: 6px;
+    
+}
+.btn3:hover{
+    background: transparent;
+    background-color: #ccc;
+}
 
 main {
     padding: 20px;
@@ -302,5 +311,6 @@ footer {
     border-radius:30px;
     box-shadow:  0 0 4rem white ,inset 0 0  6rem;
 }
+
 
 
